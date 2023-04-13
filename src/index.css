@@ -7,3 +7,21 @@
 body {
   overflow: hidden;
 }
+
+@layer utilities {
+  div::-webkit-scrollbar {
+    width: 5px;
+    height: 20px;
+  }
+  
+  div::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    @apply bg-none;
+  }
+  
+  div::-webkit-scrollbar-thumb {
+    border-radius: 100vh;
+    border: none;
+    @apply bg-hover-background;
+  }
+}
