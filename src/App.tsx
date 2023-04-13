@@ -7,12 +7,12 @@ import { Home } from './views/Home'
 
 const App: Component = () => {
   return (
-    <div class="flex">
-      <div class="flex">
+    <div class="flex overflow-hidden h-[100vh]">
+      <div class="flex h-full">
         <AppNavigator />
         <TranslationsNavigator />
       </div>
-      <div class="bg-background text-on-primary-container w-full h-[100vh] overflow-hidden">
+      <div class="bg-background text-on-primary-container w-full h-full overflow-y-auto">
         <Router>
           <Routes>
             <Route path="/" component={Home} />

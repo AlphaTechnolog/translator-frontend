@@ -1,4 +1,4 @@
-import type { Component } from 'solid-js'
+import { For, type Component } from 'solid-js'
 import { AiFillCloud, AiFillFolder, AiFillLock, AiFillStar } from 'solid-icons/ai'
 import { BsTranslate } from 'solid-icons/bs'
 
@@ -74,9 +74,9 @@ const Types: Component = () => {
       <p class="text-surface-variant">
         Types
       </p>
-      {types.map((type: Type) => (
-        <Type type={type} />
-      ))}
+      <For each={types}>
+        {(type: Type) => <Type type={type} />}
+      </For>
     </div>
   )
 }
@@ -103,9 +103,9 @@ const Folders: Component = () => {
       <p class="text-surface-variant">
         Folders
       </p>
-      {folders.map((folder: Folder) => (
-        <Folder folder={folder} />
-      ))}
+      <For each={folders}>
+        {(folder: Folder) => <Folder folder={folder} />}
+      </For>
     </div>
   )
 }
