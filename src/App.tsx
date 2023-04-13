@@ -3,7 +3,9 @@ import { Router, Routes, Route } from '@solidjs/router'
 
 import { AppNavigator } from './components/AppNavigator'
 import { TranslationsNavigator } from './components/TranslationsNavigator'
+
 import { Home } from './views/Home'
+import { Translate } from './views/Translate'
 
 const App: Component = () => {
   return (
@@ -16,6 +18,7 @@ const App: Component = () => {
         <Router>
           <Routes>
             <Route path="/" component={Home} />
+            <Route path="/translate" component={Translate} />
           </Routes>
         </Router>
       </div>
