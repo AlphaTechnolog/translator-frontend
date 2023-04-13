@@ -112,19 +112,25 @@ const Folders: Component = () => {
 
 export const AppNavigator: Component = () => {
   return (
-    <>
-      <div class="bg-lighter-background text-on-primary-container overflow-y-visible min-w-[16rem] shadow-2xl h-[100vh]">
-        <div class="h-full flex justify-center items-start my-4">
-          <div class="space-y-10 mx-4">
-            <h1 class="font-bold text-xl flex justify-start items-center">
-              <span class="text-primary mr-3"><BsTranslate /></span>
-              Speakify
-            </h1>
-            <Types />
-            <Folders />
-          </div>
+    <div class="bg-lighter-background text-on-primary-container overflow-y-visible min-w-[16rem] shadow-2xl h-[100vh] space-y-4 flex items-stretch flex-col">
+      <div class="h-full flex justify-center items-start my-4">
+        <div class="space-y-10 mx-4">
+          <h1 class="font-bold text-xl flex justify-start items-center">
+            <span class="text-primary mr-3"><BsTranslate /></span>
+            Speakify
+          </h1>
+          <Types />
+          <Folders />
         </div>
       </div>
-    </>
+      <div class="py-3 pr-1 text-center text-surface-variant border-t-[1px] border-solid border-t-hover-background">
+        <p>
+          Made by{" "}
+          <a href="https://github.com/AlphaTechnolog" target="_blank" class="text-primary no-underline">
+            AlphaTechnolog
+          </a>
+        </p>
+      </div>
+    </div>
   )
 }
